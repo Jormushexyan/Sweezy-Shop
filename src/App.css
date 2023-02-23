@@ -1,0 +1,753 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .3s ease-out;
+  font-family: secret;
+}
+
+@font-face {
+  font-family: secret;
+  src: url(fonts/secret.ttf);
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: white;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  transition: 1s ease-out;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu>li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 170px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.v-day-dropdown {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  top: 30px;
+}
+
+.v-day-dropdown>a {
+  color: black;
+  font-size: 15px;
+}
+
+.v-day-dropdown>a:hover {
+  text-decoration: underline;
+}
+
+.menu>li>a {
+  color: black;
+  font-size: 18px;
+}
+
+.menu li>svg {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.headermain {
+  width: 100%;
+  height: 600px;
+  background: url(https://blog.cmsfunding.com/hubfs/Small%20Business%20Marketing.jpeg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 0 150px;
+  animation: back 10s linear infinite alternate;
+  position: relative;
+}
+
+@keyframes back {
+  to {
+    background-size: 120%;
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.headermain>h2 {
+  font-size: 60px;
+  color: red;
+  position: relative;
+}
+
+.Typewriter {
+  color: white;
+  font-family: fantasy !important;
+}
+
+.categories {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.categories>h2 {
+  font-size: 50px;
+  padding: 30px 0;
+}
+
+.tab-menu {
+  width: 100%;
+  height: 70px;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-menu>button {
+  text-align: left;
+  padding-left: 30px;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.tab-menu>button:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  padding: 50px;
+  position: relative;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: none;
+}
+
+.loader>img {
+  width: 30%;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #d9d9d9;
+  flex-direction: column;
+  gap: .5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.item>img {
+  width: 100%;
+  cursor: pointer;
+  transition: .4s ease-out;
+}
+
+.zoom-in {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: .3s !important;
+  width: 50px !important;
+  background: #212121 !important;
+  border-radius: 0 0 0 30px !important;
+}
+
+.item>img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.item>h2 {
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.item>h4 {
+  color: crimson;
+  font-size: 12px;
+}
+
+.item>p {
+  color: #888888;
+  font-size: 12px;
+}
+
+.price {
+  text-decoration: line-through;
+  color: red;
+}
+
+.star-cont {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 25px;
+}
+
+.stars {
+  display: flex;
+  gap: 5px
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  background: orangered;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.item>button {
+  width: 100%;
+  height: 40px;
+  background: red;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: none;
+}
+
+.item>button:hover {
+  background: #212121;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+.cart-icon>svg {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.cart-icon>span {
+  font-size: 20px;
+}
+
+
+.added {
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.added>img {
+  width: 90%;
+}
+
+.adding {
+  animation: adding 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 1 forwards;
+}
+
+@keyframes adding {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  20%,
+  80% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.shake {
+  animation: shake .5s;
+}
+
+@keyframes shake {
+  20% {
+    transform: translateX(4px);
+  }
+
+  50% {
+    transform: translateX(-4px);
+  }
+
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.cart-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 5;
+  padding: 80px;
+  display: flex;
+  gap: 2rem;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+}
+
+.close>svg {
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+
+.cart {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+  padding: 100px;
+  background: #d9d9d9;
+}
+
+.cart-item {
+  width: 100%;
+  height: 160px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px 20px;
+}
+
+.cart-item>img {
+  width: 10%;
+}
+
+.cart-total {
+  width: 25%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #d9d9d9;
+  padding: 20px;
+}
+
+.cart-total>button {
+  height: 40px;
+  background: forestgreen;
+  color: white;
+  cursor: pointer;
+}
+
+.names {
+  width: 40%;
+}
+
+.prices {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem
+}
+
+.prices>button {
+  background: crimson;
+  color: white;
+  height: 20px;
+  width: 60px;
+}
+
+.prices>h5 {
+  color: red;
+  text-decoration: line-through;
+}
+
+.countes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 150px;
+  height: 40px;
+  border: 1px solid;
+  justify-content: space-around;
+  border-radius: 15px;
+}
+
+.countes>button {
+  width: 40px;
+  height: 100%;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.countes svg {
+  font-size: 18px;
+}
+
+.zoom-image {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+}
+
+.zoom-image svg {
+  width: 30px;
+  height: 100px;
+  background: black;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.zoom-item {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 2rem;
+}
+
+.zoom-item>img {
+  width: 50%;
+}
+
+.zoom-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 60px;
+}
+
+.zoom-info>span {
+  width: 120px;
+  text-align: center;
+  background: transparent;
+  border: 2px solid red;
+  color: red;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.price-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.price-buttons>button {
+  width: 180px;
+  height: 45px;
+  border-radius: 30px;
+  background: orangered;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.price-buttons>button:last-child {
+  background: #212121;
+}
+
+.form-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+form {
+  width: 500px;
+  height: 550px;
+  padding: 15px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+  text-align: center;
+}
+
+form>img {
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+form label {
+  width: 100%;
+  position: relative;
+}
+
+form label input {
+  width: 100%;
+  height: 35px;
+  background: #d9d9d9;
+  padding-left: 20px;
+  caret-color: black;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-name {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.phone label {
+  display: flex;
+  gap: 1rem;
+}
+
+form button {
+  width: 150px;
+  height: 35px;
+  background: forestgreen;
+  margin-top: 30px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.invalid {
+  width: 20px;
+  height: 20px;
+  background: red;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+
+form>div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.slider-container {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 500%;
+  height: 40vh;
+  display: flex;
+  position: absolute;
+  left: 0;
+  gap:2rem;
+  padding: 30px;
+}
+
+.slider-container>.button:nth-of-type(1) {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  z-index: 12;
+  padding: 20px;
+  font-size: 100px;
+  color: black;
+  filter: drop-shadow(0 0 2px white) drop-shadow(0 0 4px white);
+  cursor: pointer;
+}
+
+.slider-container>.button:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 12;
+  padding: 20px;
+  font-size: 100px;
+  color: black;
+  filter: drop-shadow(0 0 2px white) drop-shadow(0 0 4px white);
+  cursor: pointer;
+
+}
+
+.picture {
+  width: 25%;
+  height: 40vh;
+}
+
+.picture:nth-child(1) {
+  background-image: url('https://e0.pxfuel.com/wallpapers/423/804/desktop-wallpaper-shopping-area-in-beijing-%E2%9D%A4-for-ultra-shopping-mall.jpg');
+  background-size: cover;
+}
+
+.picture:nth-child(2) {
+  background-image: url('https://thumbs.dreamstime.com/b/christmas-shopping-woman-walking-bags-background-61609501.jpg');
+  background-size: cover;
+}
+
+.picture:nth-child(3) {
+  background-image: url('https://www.incimages.com/uploaded_files/image/1920x1080/getty_522735456_249841.jpg');
+  background-size: cover;
+}
+
+.picture:nth-child(4) {
+  background-image: url('https://woody.cloudly.space/app/uploads/crt-cotedazur/2020/07/thumbs/cover-spots-shopping-istock-534203250-1920x1080-1-1920x960.jpg');
+  background-size: cover;
+}
+
+.picture:nth-child(5) {
+  background-image: url('https://www.extensiv.com/hubfs/Skubana/Blog%20Pages/Imported_Blog_Media/ecommerce%20tools-Oct-12-2022-05-33-41-97-PM.jpg');
+  background-size: cover;
+}
+
+form p {
+  opacity: 0;
+}
+
+.up {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  font-size: 40px;
+  cursor: pointer;
+  color: black;
+  opacity: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.active {
+  transform: scale(1.1);
+  color: red !important;
+  font-weight: bold;
+}
+
+.show-image {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  z-index: 5;
+  background-size: 50% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.picture-list {
+  width: 100%;
+  display: flex;
+  gap:2rem;
+  height: 40vh;
+}
+
